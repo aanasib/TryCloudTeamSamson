@@ -16,91 +16,57 @@ import java.util.List;
 
 public abstract class BasePage {
 
+    public BasePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
     @FindBy(xpath = "//div[@class='logo logo-icon']")
     public WebElement tryCloudIcon;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[1]/a")
     public WebElement dashboard;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[2]/a")
     public WebElement files;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[3]/a")
     public WebElement photos;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[4]/a")
     public WebElement Activity;
 
-    @FindBy(xpath = "//a[contains(@aria-label,'Talk')]")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[5]/a")
     public WebElement Talk;
 
-    @FindBy(xpath = "(//*[@class='app-icon'])[6]")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[6]/a")
     public WebElement Contacts;
 
-    @FindBy(xpath = "(//*[@class='app-icon'])[7]")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[7]/a")
     public WebElement circles;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[8]/a")
     public WebElement calendar;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "/html/body/header/div[1]/ul/li[9]/a")
     public WebElement deck;
 
     @FindBy(xpath = "//div[@class='header-menu unified-search']")
     public WebElement searchBar;
 
-    @FindBy(xpath = "//img[@class='svg']")
+    @FindBy(xpath = "//div[@aria-label='Notifications']")
     public WebElement notificationIcon;
 
-    @FindBy(xpath = "//div[@id='contactsmenu']")
+    @FindBy(xpath = "//div[@class='icon-contacts menutoggle']")
     public WebElement Connections;
 
-    @FindBy(css = "h1[class='oro-subtitle']")
-    public WebElement pageSubTitle;
-
-    @FindBy(xpath = "//div[@class='menutoggle']")
+    @FindBy(xpath = "//*[@id='expand']")
     public WebElement Groups;
-
-    @FindBy(css = "div[class='loader-mask shown']")
-    @CacheLookup
-    protected WebElement loaderMask;
-
-    public BasePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-
-
-    /**
-     * @return page name, for example: Dashboard
-     */
-    public String getPageSubTitle() {
-        //any time we are verifying page name, or page subtitle, loader mask appears
-        waitUntilLoaderScreenDisappear();
-//        BrowserUtils.waitForStaleElement(pageSubTitle);
-        return pageSubTitle.getText();
-    }
-
-
-    /**
-     * Waits until loader screen present. If loader screen will not pop up at all,
-     * NoSuchElementException will be handled  by try/catch block
-     * Thus, we can continue in any case.
-     */
-    public void waitUntilLoaderScreenDisappear() {
-        try {
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.invisibilityOf(loaderMask));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
 
 
 
     /**
      * This method will navigate user to the specific module in tryCloud application.
-     * For example: if tab is equals to Activities, and module equals to Calls,
+     * For example: if tab is equals to Activity, and module equals to Contacts,
      * Then method will navigate user to this page: http://qa2.trycloud.net/index.php/login?clear=1
      *
      * @param tab
