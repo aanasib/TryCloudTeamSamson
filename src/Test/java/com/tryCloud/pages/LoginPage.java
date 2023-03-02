@@ -29,7 +29,7 @@ public class LoginPage {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
         LoginSubmitBtn.click();
-        // verification that we logged
+        // verification that we  are logged in
     }
 
 }
