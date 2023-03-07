@@ -14,8 +14,8 @@ public class LoginStepDefs {
     @Given("the user logged in as {string}")
     public void the_user_logged_in_as(String userType) {
         //based on input enter that user information
-        String username =null;
-        String password =null;
+        String username = "User1";
+        String password ="Userpass123";
 
         if(userType.equalsIgnoreCase("user")){
             username = ConfigurationReader.getProperty("user_username");
