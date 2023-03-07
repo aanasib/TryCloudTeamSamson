@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FilesModulePage_AN {
+public class FilesModulePage_AN extends DashboardPage{
 
     public FilesModulePage_AN(){
         PageFactory.initElements(Driver.getDriver(), this);
