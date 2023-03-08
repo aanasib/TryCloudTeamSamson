@@ -1,6 +1,7 @@
 Feature: As a user, I should be able to access to Files module.
 
-Background: For all scenarios, user is on the dashboard page of the Trycloud application.
+Background: User is already on the log in page
+  Given the user is on the login page
   Given user is on the dashboard page
   When the user clicks the "Files" module
 

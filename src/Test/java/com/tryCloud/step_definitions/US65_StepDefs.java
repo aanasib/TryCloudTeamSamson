@@ -42,7 +42,11 @@ public class US65_StepDefs {
                 filesModulePageAn.FilesCheckBox.click();
 
         }
+        @Then("verify all the files are selected")
+        public void verifyAllTheFilesAreSelected() {
 
+        }
 }
+
 
 
