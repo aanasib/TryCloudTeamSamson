@@ -1,15 +1,14 @@
-@login
-Feature: Users should be able to login
 
-  Background: User is already on the log in page
-    Given the user is on the login page
+Feature: As a user, I should be able to log in.
 
-@wip
-  Scenario: Verify login with different user types
-    Given the user logged in as "<userType>"
-    Given the user logged in with username as "User1" and password as "Userpass123"
-
-
-
+  @wip
+  Scenario Outline: Verify login with valid credentials
+    Given user on the login page
+    When user use username "<username>"
+    And passcode “<password>"
+    And user click the login button
+    Examples:
+      | username | password    |
+      | user1    | Userpass123 |
 
 
