@@ -1,20 +1,15 @@
 package com.tryCloud.step_definitions;
 
-import com.tryCloud.pages.DashboardPage;
-import com.tryCloud.pages.FilesModulePage_AN;
+import com.tryCloud.pages.FilesModulePage;
 import com.tryCloud.utilities.BrowserUtils;
 import com.tryCloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class US65_StepDefs {
 
-        FilesModulePage_AN filesModulePageAn = new FilesModulePage_AN();
+        FilesModulePage filesModulePageAn = new FilesModulePage();
 
         //TC1
 
