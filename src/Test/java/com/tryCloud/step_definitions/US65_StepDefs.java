@@ -7,8 +7,12 @@ import com.tryCloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
-public class US65_StepDefs{
+import java.util.List;
+
+public class US65_StepDefs {
 
         FilesModulePage_AN filesModulePageAn = new FilesModulePage_AN();
 
@@ -19,11 +23,13 @@ public class US65_StepDefs{
                 Driver.getDriver().get("http://qa2.trycloud.net/index.php/apps/dashboard/");
 
         }
+
         @When("the user clicks the {string} module")
         public void the_user_clicks_the_module(String Files) {
                 filesModulePageAn.files.click();
 
         }
+
         @Then("verify the page title is \"Files - Trycloud”")
         public void verify_the_page_title_is_files_trycloud() {
                 BrowserUtils.verifyTitle("Files - Trycloud");
@@ -36,10 +42,7 @@ public class US65_StepDefs{
                 filesModulePageAn.FilesCheckBox.click();
 
         }
-        @Then("verify all the files are selected")
-        public void verify_all_the_files_are_selected() {
+
+}
 
 
-        }
-
-    }
