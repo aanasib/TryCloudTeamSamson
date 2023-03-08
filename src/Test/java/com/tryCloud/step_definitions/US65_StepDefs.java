@@ -7,6 +7,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+
 public class US65_StepDefs {
 
         FilesModulePage filesModulePageAn = new FilesModulePage();
@@ -40,7 +45,9 @@ public class US65_StepDefs {
 
         @Then("verify all the files are selected")
         public void verifyAllTheFilesAreSelected() {
-
+                for (WebElement each : filesModulePageAn.allFilesSelected) {
+                        Assert.assertTrue(each.isSelected());
+                }
         }
 }
 
