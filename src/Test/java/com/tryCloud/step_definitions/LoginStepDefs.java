@@ -38,7 +38,6 @@ public class LoginStepDefs {
 
     }
 
-
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
 
