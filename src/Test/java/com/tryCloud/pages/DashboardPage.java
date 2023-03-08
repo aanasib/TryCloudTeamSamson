@@ -57,6 +57,8 @@ public abstract class DashboardPage {
 
 
 
+
+
     /**
      * This method will navigate user to the specific module in tryCloud application.
      * For example: if tab is equals to Activity, and module equals to Contacts,
