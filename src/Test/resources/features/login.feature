@@ -1,6 +1,6 @@
 Feature: As a user, I should be able to log in.
 
-  @wip
+@wip
   Scenario Outline: Verify login with valid credentials
     Given user on the login page
     When user use username "<username>"
