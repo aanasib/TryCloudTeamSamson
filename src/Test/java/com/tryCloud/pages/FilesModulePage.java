@@ -19,6 +19,8 @@ public class FilesModulePage extends DashboardPage {
 
     @FindBy(xpath = "//input[@class='selectCheckBox checkbox']")
     public List<WebElement> allFilesSelected;
+
+
 }
 
 
