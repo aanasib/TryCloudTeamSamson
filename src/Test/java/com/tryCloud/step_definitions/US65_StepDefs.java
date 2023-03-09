@@ -1,7 +1,9 @@
 package com.tryCloud.step_definitions;
 
 import com.tryCloud.pages.FilesModulePage;
+import com.tryCloud.pages.LoginPage;
 import com.tryCloud.utilities.BrowserUtils;
+import com.tryCloud.utilities.ConfigurationReader;
 import com.tryCloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,14 +16,16 @@ import java.util.List;
 
 public class US65_StepDefs {
 
+
         FilesModulePage filesModulePageAn = new FilesModulePage();
+        LoginPage loginPage = new LoginPage();
 
         //TC1
 
-        @Given("user is on the dashboard page")
-        public void user_is_on_the_dashboard_page() {
-                Driver.getDriver().get("http://qa2.trycloud.net/index.php/apps/dashboard/");
-
+        @Given("the user is already logged in")
+        public void theUserIsAlreadyLoggedIn() {
+                Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+                loginPage.loginAsUser();
         }
 
         @When("the user clicks the {string} module")
@@ -49,6 +53,7 @@ public class US65_StepDefs {
                         Assert.assertTrue(each.isSelected());
                 }
         }
+
 }
 
 
