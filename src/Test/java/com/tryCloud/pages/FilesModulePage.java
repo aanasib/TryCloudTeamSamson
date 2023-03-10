@@ -13,9 +13,6 @@ public class FilesModulePage extends DashboardPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    //locator for US74
-    @FindBy(xpath = "/html/body/header/div[1]/ul/li[2]/a")
-    public WebElement files;
 
 
     //locators for US65
@@ -28,10 +25,10 @@ public class FilesModulePage extends DashboardPage {
 
 
     //locators for US71
-    @FindBy(xpath = "/html/body/div[3]/div[2]/div[2]/table/tbody/tr[7]/td[2]/a/span[3]/a[2]/span[1]")
+    @FindBy(xpath = "//a[@class='action action-menu permanent']")
     public List<WebElement> actionIcon;
 
-    @FindBy(xpath = "/html/body/div[3]/div[2]/div[2]/table/tbody/tr[7]/td[2]/div/ul/li[8]/a/span[1]")
+    @FindBy(xpath = "//a[@class='menuitem action action-delete permanent']")
     public WebElement deleteFileAction;
 
     @FindBy(xpath = "//a[.='Deleted files']")
