@@ -5,6 +5,7 @@ import com.tryCloud.pages.LoginPage;
 import com.tryCloud.utilities.BrowserUtils;
 import com.tryCloud.utilities.ConfigurationReader;
 import com.tryCloud.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,8 +29,8 @@ public class US72_CommentsPageStepDefs {
         commentsPage.files.click();
         BrowserUtils.sleep(3);
     }
-    @When("user click action-icon from any file on the page")
-    public void user_click_action_icon_from_any_file_on_the_page() {
+    @And("user click action-icon from any file on the current page")
+    public void userClickActionIconFromAnyFileOnTheCurrentPage() {
         commentsPage.actionIcon.click();
     }
     @When("user choose the Details option")
@@ -52,6 +53,7 @@ public class US72_CommentsPageStepDefs {
 
         System.out.println(commentsPage.actualComment.isDisplayed());
     }
+
 
 }
 //
