@@ -23,8 +23,8 @@ public class US68_UploadFile_StepDefinitions {
         loginPage.loginAsUser();
     }
     @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String string) {
-        filePage.filesModule.click();
+    public void theUserClicksTheModule(String arg0) {
+        filePage.files.click();
     }
 
     @When("the user clicks the add icon on the top")
@@ -46,6 +46,7 @@ public class US68_UploadFile_StepDefinitions {
         }
 
     }
-}
-//changes
 
+}
+
+// changes
