@@ -27,6 +27,7 @@ public class LoginStepDefs {
     }
 
     @When("passcode “Userpass123\"")
+    //@When("passcode “Userpass123\"")
     public void passcode_userpass123() {
         //String password = ConfigurationReader.getProperty("user_password");
         loginPage.passWord.sendKeys(ConfigurationReader.getProperty("user_password"));
@@ -44,3 +45,19 @@ public class LoginStepDefs {
         loginPage.loginAsUser();
     }
 }
+
+/*
+
+Feature: As a user, I should be able to log in.
+
+  @wip
+  Scenario Outline: Verify login with valid credentials
+    Given user on the login page
+    When user use username "<username>"
+    And passcode “<password>"
+    And user click the login button
+    Examples:
+      | username | password    |
+      | user1    | Userpass123 |
+
+ */

@@ -16,8 +16,6 @@ public class LoginPage extends DashboardPage {
     @FindBy(id = "user")
     public WebElement userName;
 
-
-
     @FindBy(id = "password")
     public WebElement passWord;
 

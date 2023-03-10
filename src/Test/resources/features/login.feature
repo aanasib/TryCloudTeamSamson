@@ -9,6 +9,6 @@ Feature: As a user, I should be able to log in.
     And user click the login button
     Examples:
       | username | password    |
-      | user1    | Userpass123 |
+      | User1    | Userpass123 |
 
 
