@@ -5,10 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 
 public class FilePage extends DashboardPage{
 
-    public WebElement file;
 
     public FilePage(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -27,5 +28,7 @@ public class FilePage extends DashboardPage{
     @FindBy(xpath = "//label[@for='file_upload_start'] ")
     public WebElement uploadFileOption;
 
+    @FindBy(xpath = "//span[@class= 'innernametext']")
+    public List<WebElement> myUploadedFile;
+
 }
-// Thanks Attia and Million
