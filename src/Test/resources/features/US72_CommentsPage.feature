@@ -1,6 +1,6 @@
 Feature: Users should be able to write comments to files/folders.
 
-  kBackground: User is logged in to the website
+  Background: User is logged in to the website
 
   Scenario: Verify users to write comments to files/folder
     Given user on the home page
